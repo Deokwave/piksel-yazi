@@ -1,0 +1,14 @@
+{
+  "name": "piksel-yazi",
+  "version": "1.0.0",
+  "description": "Türkçe karakterli 5x7 piksel yazı tipi ve SVG çıktısı",
+  "type": "module",
+  "main": "dist/yazi.js",
+  "types": "dist/yazi.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "ornek": "node dist/ornek.js"
+  },
+  "license": "UNLICENSED",
+  "private": true
+}
