@@ -7,6 +7,8 @@ npm run build
 node dist/ornek.js "MERHABA DÜNYA" > ornek.svg
 ```
 
+Bir metnin yazılıp yazılamayacağını önceden görmek için `eksikHarfler("metin")` kullanabilirsin; boş liste dönerse bütün harfler var.
+
 Ölçek ve renk de verebilirsin: `node dist/ornek.js "DEOKWAVE" 8 "#5fd4ff"`. Ölçek 1 ile 16 arasında olmalı.
 
 © 2026 Deokwave. Tüm hakları saklıdır.

@@ -82,6 +82,17 @@ export function buyut(metin: string): string {
   return metin.toLocaleUpperCase("tr-TR");
 }
 
+// Harfin yazı tipinde karşılığı var mı? (Küçük harfler önce büyütülür.)
+export function desteklenir(harf: string): boolean {
+  const buyuk = buyut(harf);
+  return buyuk === " " || buyuk in HARFLER || buyuk in AKSANLI;
+}
+
+// Metinde yazı tipinde olmayan harfleri döndürür; boşsa metin sorunsuz yazılabilir.
+export function eksikHarfler(metin: string): string[] {
+  return [...new Set([...buyut(metin)].filter((h) => !desteklenir(h)))];
+}
+
 export function glif(harf: string): Glif {
   if (harf === " ") return { genislik: 3, satirlar: Array(HUCRE_YUKSEKLIGI).fill("...") };
   const aksan = AKSANLI[harf];
